@@ -1,0 +1,7 @@
+Compiling C
+
+gcc lib.c main.c -o obj -Wall
+
+Compilling C++
+
+g++ -o obj main.cpp lib1.cpp lib2.cpp
