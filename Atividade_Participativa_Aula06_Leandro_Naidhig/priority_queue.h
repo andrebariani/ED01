@@ -7,23 +7,26 @@
 
 typedef struct {
 	int idade;
-	int RA;
 } T;
 
 typedef struct {
 	int n;
-	T vetor[MAX];
-	int (*comp)(T,T);
+	int max_size;
+	T *vetor;
+	int (*cmp)(T,T);
 } priority_queue;
 
-void inicializar(priority_queue *q, int (*comp)(T,T) );
+void swap(T *A, T *B);
+priority_queue* inicializar(int max_size, int (*cmp)(T,T));
 void inserir( priority_queue *q, T item);
 void remover( priority_queue *q, T* item);
 void prioritario( priority_queue *q, T* item );
 int tamanho( priority_queue *q );
-void resize()
-
 void imprimir( priority_queue *q );
+void fixUp(priority_queue *q, int filho);
+void fixDown(priority_queue *q, int pai);
+void realoca_heap( priority_queue *q , int size);
+void free_heap( priority_queue *q );
 
 
 #endif

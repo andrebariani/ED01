@@ -1,5 +1,5 @@
 #ifndef ARVORE_H_
-#define AARVORE_H_
+#define ARVORE_H_
 
 typedef char T;
 
