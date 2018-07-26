@@ -11,6 +11,7 @@ typedef struct {
 
 struct node {
     T data;
+    int bal;
     struct node *l, *r;
 };
 
@@ -195,6 +196,36 @@ int conta_folhas(struct node *t) {
     }
 
     return n;
+}
+
+// void remove( ABB * tree, int n ) {
+//     tree->raiz = remove_no( tree->raiz , n );
+// }
+//
+// struct node * remove_no( struct node *p, int n ) {
+//     if(p == null)
+//         return NULL;
+//     if(n < p->data.n)
+//         p->l = remove_no(p->l, n);
+//     else if(n > p->data.n) {
+//         p->r = remove_no(p->r, n);
+//     } else {
+//         if(p->r == NULL){
+//             struct node * left = p->l;
+//             free(p);
+//             return left;
+//         }
+//         if(p->l == NULL){
+//             struct node * right = p->r;
+//             free(p);
+//             return right;
+//         }
+//
+//     }
+// }
+
+int altura( struct node *p ) {
+
 }
 
 int main() {
